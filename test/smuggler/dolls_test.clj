@@ -1,7 +1,7 @@
-(ns smuggler.core-test
+(ns smuggler.dolls-test
   (:require [clojure.string :as str])
   (:use clojure.test
-        smuggler.core))
+        smuggler.dolls))
 
 (defn load-dolls [s]
   (set
@@ -56,4 +56,4 @@ luke        9   150")
 
 (deftest case-1
   (testing "Example one finds correct optimal dolls."
-    (is (= solution-1 (opt-load w-1 dolls-1)))))
+    (is (= solution-1 (pack-bag w-1 dolls-1)))))
